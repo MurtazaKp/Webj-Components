@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeatureTwo = ({title,stats}) => {
+const StatsTwo = ({title,stats}) => {
   const statsData = {
     title: 'The only platform that creates unique & rare UI Kits with TailwindCSS',
     stats: [
@@ -49,4 +49,4 @@ const FeatureTwo = ({title,stats}) => {
   );
 };
 
-export default FeatureTwo;
+export default StatsTwo;

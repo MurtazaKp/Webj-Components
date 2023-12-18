@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeatureOne = ({title,description,stats}) => {
+const StatsOne = ({title,description,stats}) => {
   const numbersData = {
     title: 'Numbers tell our story',
     description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.',
@@ -47,4 +47,4 @@ const FeatureOne = ({title,description,stats}) => {
   );
 };
 
-export default FeatureOne;
+export default StatsOne;
