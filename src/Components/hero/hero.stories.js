@@ -12,13 +12,15 @@ const Template = (args) => <HeroOne {...args} />;
 
 export const HeroOneStory = Template.bind({});
 HeroOneStory.args = {
-    title: 'A special credit card made for Developers.',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.',
-    buttonText: 'Get Free Card',
-    statsData : [
-        {label: 'Cards Delivered', value: '2943'} ,
-        {label: 'Transaction Completed', value: '$1M+'} ,
-    ]
+  heading: "Smart email campaign builder, made for Developers",
+  subheading: "Turn your visitors into profitable business",
+  demoButton: { title: 'Watch free demo', url: '#' },
+  ctaButton: { title: 'Watch free demo', url: '#' },
+  trialText: '60 Days free trial · No credit card required',
+  illustrationSrc: {
+      src:'https://cdn.rareblocks.xyz/collection/clarity/images/hero/2/illustration.png',
+      alt:"bannerImage"
+  }
 };
 
 
