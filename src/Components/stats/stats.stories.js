@@ -1,16 +1,16 @@
 import React from 'react';
-import FeatureOne from './featureOne';
-import FeatureTwo from './featureTwo';
+import StatisticsOne from './statsOne';
+import StatisticsTwo from './statsTwo';
 
 
 export default {
-  title: 'Features',
+  title: 'Statistics',
 };
 
-const FeatureOneTemplate = (args) => <FeatureOne {...args} />;
+const StatisticsOneTemplate = (args) => <StatisticsOne {...args} />;
 
-export const FeatureOneStory = FeatureOneTemplate.bind({});
-FeatureOneStory.args = {
+export const StatisticsOneStory = StatisticsOneTemplate.bind({});
+StatisticsOneStory.args = {
     title: 'Numbers tell our story',
     description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.',
     stats: [
@@ -33,10 +33,10 @@ FeatureOneStory.args = {
 };
 
 
-const FeatureTwoTemplate = (args) => <FeatureTwo {...args} />;
+const StatisticsTwoTemplate = (args) => <StatisticsTwo {...args} />;
 
-export const FeatureTwoStory = FeatureTwoTemplate.bind({});
-FeatureTwoStory.args = {
+export const StatisticsTwoStory = StatisticsTwoTemplate.bind({});
+StatisticsTwoStory.args = {
     title: 'The only platform that creates unique & rare UI Kits with TailwindCSS',
     stats: [
       {
