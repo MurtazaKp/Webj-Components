@@ -71,46 +71,47 @@ ContactOneStory.args = {
 const ContactTwoTemplate = (args) => <ContactTwo {...args} />;
 
 export const ContactTwoStory = ContactTwoTemplate.bind({});
-ContactTwoStory.args = {
-   heading: {
-      title: "Contact Us",
-      description: "Clarity gives you the blocks & components you need to create a truly professional website.",
+ContactTwoStory.args ={
+    title: 'Contact Us',
+    description: 'Clarity gives you the blocks & components you need to create a truly professional website.',
+    usaOffice: {
+      title:"Usa Office Hours",
+      hours: 'Monday-Friday\n8:00 am to 5:00 pm',
+      address: '8502 Preston Rd. Ingle,\nMaine 98380, USA',
     },
-    contactDetails: [
+    canadaOffice: {
+      hours: 'Canada Office Hours',
+      address: '8502 Preston Rd. Ingle,\nMaine 98380, USA',
+    },
+    contactInfo: {
+      phone1: '+1-246-888-0653',
+      phone2: '+1-222-632-0194',
+    },
+    formFields: {
+    title:"Our Address",
+   fields: [
       {
-        office: "USA",
-        hours: "Monday-Friday\n8:00 am to 5:00 pm",
-        address: "8502 Preston Rd. Ingle,\nMaine 98380, USA",
-        phoneNumbers: ["+1-246-888-0653", "+1-222-632-0194"],
+        label: 'Your name',
+        type: 'text',
+        name: 'fullName',
+        id: 'fullName',
+        placeholder: 'Enter your full name',
       },
       {
-        office: "Canada",
-        hours: "Monday-Friday\n8:00 am to 5:00 pm",
-        address: "8502 Preston Rd. Ingle,\nMaine 98380, USA",
+        label: 'Email address',
+        type: 'email',
+        name: 'email',
+        id: 'email',
+        placeholder: 'Enter your email',
+      },
+      {
+        label: 'Write your message',
+        type: 'textarea',
+        name: 'message',
+        id: 'message',
+        placeholder: 'Write us your question here...',
       },
     ],
-    form: {
-      fields: [
-        {
-          name: 'fullName',
-          label: 'Your Name',
-          type: 'text',
-          placeholder: 'Enter your full name',
-        },
-        {
-          name: 'email',
-          label: 'Email Address',
-          type: 'email',
-          placeholder: 'Enter your email',
-        },
-        {
-          name: 'message',
-          label: 'Your Message',
-          type: 'textarea',
-          placeholder: 'Write us your question here...',
-        },
-      ],
-      buttonLabel: 'Send Message',
-    },
-};
+  }
+  }
 
