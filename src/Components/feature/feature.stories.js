@@ -5,7 +5,7 @@ import FeatureTwo from './featureTwo';
 
 
 export default {
-  title: 'Featuresdaf',
+  title: 'Features',
 };
 
 const FeatureOneTemplate = (args) => <FeatureOne {...args} />;
