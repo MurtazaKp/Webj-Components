@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-const PricingTwo = () => {
-  const [selectedPlan, setSelectedPlan] = useState('monthly'); // 'monthly' is the default selected plan
+const PricingTwo = ({planHeading,planDescription,plans}) => {
 
-  // Data for each plan
   const plansData = {
     planHeading:"Plans that scale with business",
     planDescription:" Clarity gives you the blocks & components you need to create a truly professional website, landing page or admin panel for your SaaS",
@@ -79,10 +77,10 @@ const PricingTwo = () => {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-           {plansData.planHeading}
+           {planHeading}
           </h2>
           <p className="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">
-           {plansData.planDescription}
+           {planDescription}
           </p>
         </div>
 
@@ -91,7 +89,7 @@ const PricingTwo = () => {
         </div>
 
         <div className="grid max-w-5xl grid-cols-1 mx-auto mt-12 lg:grid-cols-3 lg:gap-8 sm:mt-16 lg:mt-20">
-          {plansData.plans.map((plan) => (
+          {plans.map((plan) => (
             <div
               key={plan}
               className={` bg-white border border-gray-200 divide-y divide-gray-200 rounded-2xl sm:rounded-3xl mt-14 lg:mt-0`}
