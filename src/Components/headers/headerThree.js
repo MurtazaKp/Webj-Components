@@ -23,7 +23,7 @@ const HeaderThree = ({ data }) => {
 
           <div className="flex shrink-0">
             <a href="#" title="" className="flex">
-              <img className="w-auto h-8" src={data.logoSrc} alt="" />
+              <img className="w-auto h-8" src={data.logo.src} alt="" />
             </a>
           </div>
 
