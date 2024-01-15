@@ -47,7 +47,7 @@ const HeaderThreeTemplate = (args) => <HeaderThree {...args} />;
 export const HeaderThreeStory = HeaderThreeTemplate.bind({});
 HeaderThreeStory.args = {
     data: {
-        logoSrc: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/logo.svg',
+        logo: {src:'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/logo.svg',alt:'logo'},
         navItems: [
           { title: 'Tour', href: '#' },
           { title: 'Products', href: '#' },
@@ -70,8 +70,8 @@ const HeaderFourTemplate = (args) => <HeaderFour {...args} />;
 export const HeaderFourStory = HeaderFourTemplate.bind({});
 
 HeaderFourStory.args = {
-    data: {
-        logoSrc: 'https://landingfoliocom.imgix.net/store/collection/saasui/images/logo.svg',
+
+        logo: {src:'https://landingfoliocom.imgix.net/store/collection/saasui/images/logo.svg',alt:"logo"},
             navigationLinks: [
               { label: 'Products', url: '#',target:"_blank" },
               { label: 'Features', url: '#',target:"_blank" },
@@ -83,7 +83,7 @@ HeaderFourStory.args = {
                 href:"/",
                 target:"_blank"
             },
-      },
+
     
 }
 

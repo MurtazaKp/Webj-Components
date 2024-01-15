@@ -46,9 +46,7 @@ HeroThreeStory.args = {
     },
     title: 'A special credit card made for Developers.',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.',
-    buttonText: 'Get Free Card',
-    cardsDelivered: '2943',
-    transactionCompleted: '$1M+',
+    
     stats: [
       { label: 'Cards Delivered', value: '2943' },
       { label: 'Transaction Completed', value: '$1M+' },

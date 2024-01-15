@@ -123,13 +123,13 @@ FooterThreeStory.args = {
     { icon: 'linkedin', url: 'https://www.linkedin.com/' },
   ],
   navigationLinks: [
-    { title: 'About', url: '#' },
-    { title: 'Features', url: '#' },
-    { title: 'Works', url: '#' },
-    { title: 'Support', url: '#' },
-    { title: 'Help', url: '#' },
+    { label: 'About', href: '#',target:"_blank" },
+    { label: 'Features', href: '#',target:"_blank" },
+    { label: 'Works', href: '#',target:"_blank" },
+    { label: 'Support', href: '#',target:"_blank" },
+    { label: 'Help', href: '#',target:"_blank" },
   ],
-  copyrightText: '© Copyright 2021, All Rights Reserved',
+  copyright: '© Copyright 2021, All Rights Reserved',
 };
 
 
