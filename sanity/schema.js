@@ -11,7 +11,9 @@ import headerOne from './schemas/components/headers/headerOne'
 import heroOne from './schemas/components/heroSection/heroOne,'
 import newsletterOne from './schemas/components/newsletter/newsletterOne'
 import pricingOne from './schemas/components/pricing/pricingOne'
+import signupOne from './schemas/components/signup/signupOne'
 import statsOne from './schemas/components/stats/statsOne'
+import steps from './schemas/components/steps/steps'
 import teamOne from './schemas/components/team/teamOne'
 import testimonialOne from './schemas/components/testimonials/testimonialOne'
 
@@ -33,5 +35,7 @@ export const schema = {
         statsOne,
         pricingOne,
         faqs,
+        steps,
+        signupOne,
     ],
 }

@@ -31,6 +31,8 @@ export default defineType({
                 { type: 'statisticsOne' },
                 { type: 'pricingOne' },
                 { type: 'faqOne' },
+                { type: 'stepOne' },
+                { type: 'signUpOne' },
             ],
         }),
     ],
