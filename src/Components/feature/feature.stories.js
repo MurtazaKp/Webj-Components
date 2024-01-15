@@ -12,7 +12,9 @@ const FeatureOneTemplate = (args) => <FeatureOne {...args} />;
 
 export const FeatureOneStory = FeatureOneTemplate.bind({});
 FeatureOneStory.args = {
-    features: [
+   
+      heading:"Take the next step without any hassle & get results fast",
+   features: [
         {
           id: 1,
           icon: "chart",
@@ -39,7 +41,8 @@ FeatureOneStory.args = {
         },
     
       ]
-};
+    
+}
 
 
 const FeatureTwoTemplate = (args) => <FeatureTwo {...args} />;
