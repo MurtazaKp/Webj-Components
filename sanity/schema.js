@@ -1,6 +1,7 @@
 import components from './schemas/components'
 import blogAuthorOne from './schemas/components/BlogAuthor/blogAuthorOne'
 import DataStatsOne from './schemas/components/DataStats/DataStatsOne'
+import incentiveOne from './schemas/components/IncentiveOne/incentiveOne'
 import aboutOne from './schemas/components/about/aboutOne'
 import approveTransactionOne from './schemas/components/approveTransaction/approveTransactionOne'
 import articleOne from './schemas/components/article/articleOne'
@@ -25,6 +26,7 @@ import featureOne from './schemas/components/features/featureOne'
 import footerOne from './schemas/components/footer/footerOne'
 import headerOne from './schemas/components/headers/headerOne'
 import heroOne from './schemas/components/heroSection/heroOne,'
+import homeSidebarOne from './schemas/components/homeSidebar/homeSidebarOne'
 import imageGallaryOne from './schemas/components/imageGallary/imageGallaryOne'
 import integrationOne from './schemas/components/integration/integrationOne'
 import loginOne from './schemas/components/login/loginOne'
@@ -49,6 +51,7 @@ import tabsOne from './schemas/components/tabs/tabsOne'
 import teamOne from './schemas/components/team/teamOne'
 import testimonialOne from './schemas/components/testimonials/testimonialOne'
 import transactionProgressOne from './schemas/components/transactionProgress/transactionProgressOne'
+import verticalMenu from './schemas/components/verticalMenu/verticalMenu'
 
 export const schema = {
     types: [
@@ -103,5 +106,8 @@ export const schema = {
         articleOne,
         transactionProgressOne,
         mintSuccessOne,
+        homeSidebarOne,
+        verticalMenu,
+        incentiveOne,
     ],
 }

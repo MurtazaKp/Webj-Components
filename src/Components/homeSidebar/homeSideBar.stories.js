@@ -51,6 +51,11 @@ HomeSidebarOneStory.args = {
     ],
     newsletter: {
         title: 'Join exclusive list',
+        newsletterCtaText:
+            'Join with2600+ Developers and start getting feedbacks right now',
+        newsletterCtaButton: {
+            label: 'Join Now',
+        },
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis auctor.',
         avatars: [
@@ -58,5 +63,11 @@ HomeSidebarOneStory.args = {
             'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/home-sidebar/2/avatar-2.png',
             'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/home-sidebar/2/avatar-3.png',
         ],
+        newsletterForm: {
+            label: 'email',
+            type: 'email',
+            placeholder: 'Enter a Email Address',
+        },
+        privacyText: 'we do not sell you data',
     },
 }

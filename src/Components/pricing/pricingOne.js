@@ -62,7 +62,7 @@ const PricingOne = ({ packageHeading, packageDescription, packages }) => {
                                     Get Started
                                 </a>
                                 <p className="text-gray-900 mt-8 text-base font-bold font-pj group-hover:text-white duration-500">
-                                    What's included:
+                                    Whats included:
                                 </p>
                                 <ul className="mt-4 space-y-3 text-base font-medium text-gray-600 font-pj">
                                     <li>130+ Coded Blocks</li>
