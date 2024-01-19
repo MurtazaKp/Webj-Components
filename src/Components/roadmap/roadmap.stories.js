@@ -1,7 +1,6 @@
 import React from 'react'
 import RoadmapOne from './roadmapOne'
 import RoadmapTwo from './roadmaptwo'
-RoadmapTwo
 
 export default {
     title: 'Roadmap',
