@@ -25,7 +25,7 @@ export default {
 const Template = (args) => <Badge {...args} />
 
 export const BadgeStory = Template.bind({})
-BadgeStoryStory.args = {
+BadgeStory.args = {
     label: 'Badge',
     type: 'normal',
 }

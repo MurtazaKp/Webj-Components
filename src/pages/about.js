@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useState, useEffect } from 'react'
-
 import { client } from '../../sanity/lib/client'
 import { urlForImage } from '../../sanity/lib/image'
 import AboutUsSection from '@/Components/about/aboutOne'
@@ -98,7 +97,6 @@ export default function Contact() {
         fetchBlogData()
     }, [])
 
-    console.log(teamData)
     return (
         <>
             <AboutUsSection {...aboutData} />
