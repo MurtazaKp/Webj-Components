@@ -51,19 +51,20 @@ const SignUpOne = ({
         <section className="min-h-full lg:flex lg:justify-between">
             <div className="flex flex-col justify-center flex-1 px-4 py-12 bg-white sm:px-6 lg:px-20 xl:px-24">
                 <div className="flex-1 max-w-sm mx-auto lg:max-w-md">
-                    <img
-                        className="w-auto h-8 mx-auto lg:mx-0"
-                        src={logo.src}
-                        alt={logo.alt}
-                    />
-
+                    {logo && (
+                        <img
+                            className="w-auto h-8 mx-auto lg:mx-0"
+                            src={logo.src}
+                            alt={logo.alt}
+                        />
+                    )}
                     <h1 className="mt-10 text-3xl font-bold text-center text-gray-900 lg:mt-20 xl:mt-32 sm:text-4xl xl:text-5xl font-pj lg:text-left">
                         {sectionTitle}
                     </h1>
 
                     <form action="#" method="POST" className="mt-10">
                         <div className="space-y-4">
-                            {formFields.map((field, index) => (
+                            {formFields?.map((field, index) => (
                                 <div key={index}>
                                     <label htmlFor="" className="sr-only">
                                         {field.label}
@@ -127,13 +128,15 @@ const SignUpOne = ({
 
                     <p className="mt-10 text-base font-normal text-center text-gray-900 lg:mt-20 xl:mt-32 font-pj lg:text-left">
                         {loginLinkLabel}{' '}
-                        <a
-                            href={loginLink.href}
-                            title=""
-                            className="font-bold rounded focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:underline"
-                        >
-                            {loginLink.label}
-                        </a>
+                        {loginLink && (
+                            <a
+                                href={loginLink?.href}
+                                title=""
+                                className="font-bold rounded focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:underline"
+                            >
+                                {loginLink?.label}
+                            </a>
+                        )}
                     </p>
                 </div>
             </div>
@@ -147,41 +150,43 @@ const SignUpOne = ({
                     />
                 </div>
 
-                <div className="relative max-w-sm mx-auto">
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-800 rounded-xl">
-                        <svg
-                            className="w-auto h-5 text-white"
-                            viewBox="0 0 33 23"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M32.0011 4.7203L30.9745 0C23.5828 0.33861 18.459 3.41404 18.459 12.4583V22.8687H31.3725V9.78438H26.4818C26.4819 6.88236 28.3027 5.17551 32.0011 4.7203Z" />
-                            <path d="M13.5421 4.7203L12.5155 0C5.12386 0.33861 0 3.41413 0 12.4584V22.8687H12.914V9.78438H8.02029C8.02029 6.88236 9.84111 5.17551 13.5421 4.7203Z" />
-                        </svg>
-                    </div>
+                {testimonial && (
+                    <div className="relative max-w-sm mx-auto">
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-800 rounded-xl">
+                            <svg
+                                className="w-auto h-5 text-white"
+                                viewBox="0 0 33 23"
+                                fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M32.0011 4.7203L30.9745 0C23.5828 0.33861 18.459 3.41404 18.459 12.4583V22.8687H31.3725V9.78438H26.4818C26.4819 6.88236 28.3027 5.17551 32.0011 4.7203Z" />
+                                <path d="M13.5421 4.7203L12.5155 0C5.12386 0.33861 0 3.41413 0 12.4584V22.8687H12.914V9.78438H8.02029C8.02029 6.88236 9.84111 5.17551 13.5421 4.7203Z" />
+                            </svg>
+                        </div>
 
-                    <blockquote className="mt-14">
-                        <p className="text-2xl font-medium leading-relaxed text-white lg:text-3xl font-pj">
-                            {testimonial.quote}
-                        </p>
-                    </blockquote>
+                        <blockquote className="mt-14">
+                            <p className="text-2xl font-medium leading-relaxed text-white lg:text-3xl font-pj">
+                                {testimonial.quote}
+                            </p>
+                        </blockquote>
 
-                    <div className="flex items-center mt-12">
-                        <img
-                            className="flex-shrink-0 object-cover rounded-full w-14 h-14"
-                            src={testimonial.authorAvatar.src}
-                            alt={testimonial.authorAvatar.alt}
-                        />
-                        <div className="ml-4">
-                            <p className="text-xl font-bold text-white font-pj">
-                                {testimonial.authorName}
-                            </p>
-                            <p className="mt-px text-lg font-normal text-gray-400 font-pj">
-                                {testimonial.authorRole}
-                            </p>
+                        <div className="flex items-center mt-12">
+                            <img
+                                className="flex-shrink-0 object-cover rounded-full w-14 h-14"
+                                src={testimonial.authorAvatar.src}
+                                alt={testimonial.authorAvatar.alt}
+                            />
+                            <div className="ml-4">
+                                <p className="text-xl font-bold text-white font-pj">
+                                    {testimonial.authorName}
+                                </p>
+                                <p className="mt-px text-lg font-normal text-gray-400 font-pj">
+                                    {testimonial.authorRole}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
         </section>
     )

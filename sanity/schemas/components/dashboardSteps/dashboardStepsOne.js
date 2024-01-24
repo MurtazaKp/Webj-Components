@@ -15,7 +15,7 @@ export default defineType({
                     fields: [
                         defineField({
                             name: 'id',
-                            title: 'ID',
+                            title: 'Step ID',
                             type: 'number',
                         }),
                         defineField({
@@ -32,5 +32,28 @@ export default defineType({
                 },
             ],
         }),
+        // Add more fields as needed
     ],
+    initialValue: {
+        steps: [
+            {
+                id: 1,
+                title: 'Create Free Account',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            },
+            {
+                id: 2,
+                title: 'Setup Your Profile',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            },
+            {
+                id: 3,
+                title: 'Start Monitoring',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            },
+        ],
+    },
 })

@@ -60,10 +60,11 @@ const ProgramOne = ({
                                 {description}
                             </p>
                             <div className="mt-8">
-                                <a
-                                    href={buttonText.href}
-                                    title=""
-                                    className="
+                                {buttonText && (
+                                    <a
+                                        href={buttonText.href}
+                                        title=""
+                                        className="
                                         inline-flex
                                         items-center
                                         justify-center
@@ -83,20 +84,23 @@ const ProgramOne = ({
                                         hover:bg-opacity-90
                                         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-secondary
                                     "
-                                    role="button"
-                                >
-                                    {buttonText.label}
-                                </a>
+                                        role="button"
+                                    >
+                                        {buttonText.label}
+                                    </a>
+                                )}
                             </div>
                         </div>
 
                         <div className="relative max-w-md mt-8 overflow-hidden rounded-lg group lg:mt-auto">
                             <div className="aspect-w-16 aspect-h-9 mt-6">
-                                <img
-                                    className="object-cover w-full h-full transition-all duration-300 transform opacity-70 group-hover:scale-125"
-                                    src={imageUrl.src}
-                                    alt={imageUrl.alt}
-                                />
+                                {imageUrl && (
+                                    <img
+                                        className="object-cover w-full h-full transition-all duration-300 transform opacity-70 group-hover:scale-125"
+                                        src={imageUrl.src}
+                                        alt={imageUrl.alt}
+                                    />
+                                )}
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent"></div>
                         </div>
@@ -104,7 +108,7 @@ const ProgramOne = ({
 
                     <div className="lg:pl-16">
                         <div className="overflow-hidden border divide-y rounded-lg border-neutral divide-neutral">
-                            {weeks.map((week, index) => (
+                            {weeks?.map((week, index) => (
                                 <div
                                     key={index}
                                     className="px-8 py-10 transition-all duration-200 hover:bg-dark-gray"

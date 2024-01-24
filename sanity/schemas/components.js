@@ -68,7 +68,7 @@ export default defineType({
                 { type: 'mintSuccessOne' },
                 { type: 'homeSidebarOne' },
                 { type: 'verticalMenuOne' },
-                { type: 'incentiveOne' },
+                { type: 'incentivesOne' },
             ],
         }),
     ],

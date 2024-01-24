@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ArticleOne = ({ subheading, date, heading, content }) => {
-    // Declare data object with HTML content and heading
     const blogData = {
         subheading: 'blog',
         date: ' April 14, 2021',

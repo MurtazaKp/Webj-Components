@@ -9,11 +9,13 @@ export default defineType({
             name: 'heading',
             title: 'Heading',
             type: 'string',
+            initialValue: 'Customer List',
         }),
         defineField({
             name: 'description',
             title: 'Description',
             type: 'text',
+            initialValue: 'Lorem ipsum dolor sit amet, consectetur adipis.',
         }),
         defineField({
             name: 'CustomerList',
@@ -41,9 +43,43 @@ export default defineType({
                         defineField({
                             name: 'avatar',
                             title: 'Avatar',
-                            type: 'image',
+                            type: 'object',
+                            fields: [
+                                defineField({
+                                    name: 'src',
+                                    title: 'Source',
+                                    type: 'image',
+                                }),
+                                defineField({
+                                    name: 'alt',
+                                    title: 'Alt Text',
+                                    type: 'string',
+                                }),
+                            ],
                         }),
                     ],
+                },
+            ],
+            initialValue: [
+                {
+                    id: 1,
+                    name: 'Dianne Russell',
+                    role: 'Project Manager',
+                },
+                {
+                    id: 2,
+                    name: 'Devon Lane',
+                    role: 'Ethical Hacker',
+                },
+                {
+                    id: 3,
+                    name: 'Ralph Edwards',
+                    role: 'UI/UX Designer',
+                },
+                {
+                    id: 4,
+                    name: 'Bessie Cooper',
+                    role: 'Scrum Master',
                 },
             ],
         }),

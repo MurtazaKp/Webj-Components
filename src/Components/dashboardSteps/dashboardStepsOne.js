@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Steps = ({ steps }) => {
+const DashboardStepsOne = ({ steps }) => {
     const stepsData = [
         {
             title: 'Create Free Account',
@@ -23,7 +23,7 @@ const Steps = ({ steps }) => {
         <div className="py-12 bg-white">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <nav className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:justify-between md:space-x-6 md:items-center">
-                    {steps.map((step, index) => (
+                    {steps?.map((step, index) => (
                         <a
                             key={index}
                             href="#"
@@ -83,4 +83,4 @@ const Steps = ({ steps }) => {
     )
 }
 
-export default Steps
+export default DashboardStepsOne

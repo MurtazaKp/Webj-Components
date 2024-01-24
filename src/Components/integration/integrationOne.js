@@ -87,7 +87,7 @@ const IntegrationOne = ({
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                    {integrations.map((integration, index) => (
+                    {integrations?.map((integration, index) => (
                         <div
                             key={index}
                             className="overflow-hidden group bg-white rounded shadow"
@@ -131,13 +131,15 @@ const IntegrationOne = ({
                 </div>
 
                 <div className="mt-12 text-center">
-                    <a
-                        href={integrationAll.href}
-                        title=""
-                        className="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
-                    >
-                        {integrationAll.label}
-                    </a>
+                    {integrationAll && (
+                        <a
+                            href={integrationAll.href}
+                            title=""
+                            className="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"
+                        >
+                            {integrationAll.label}
+                        </a>
+                    )}
                 </div>
             </div>
         </section>
