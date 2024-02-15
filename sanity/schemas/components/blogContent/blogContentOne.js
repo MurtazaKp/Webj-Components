@@ -20,8 +20,8 @@ export default defineType({
                         }),
                         defineField({
                             name: 'link',
-                            title: 'Link',
-                            type: 'url',
+                            title: 'href',
+                            type: 'string',
                         }),
                     ],
                 },
@@ -50,7 +50,7 @@ export default defineType({
                 defineField({
                     name: 'src',
                     title: 'Source',
-                    type: 'url',
+                    type: 'image',
                 }),
                 defineField({
                     name: 'alt',
@@ -74,13 +74,13 @@ export default defineType({
                         }),
                         defineField({
                             name: 'href',
-                            title: 'Link',
-                            type: 'url',
+                            title: 'Href',
+                            type: 'string',
                         }),
                         defineField({
                             name: 'icon',
                             title: 'Icon',
-                            type: 'string', // Replace with appropriate icon type or schema
+                            type: 'string', // This can be a string field or you can store SVG paths directly
                         }),
                     ],
                 },
@@ -89,7 +89,109 @@ export default defineType({
         defineField({
             name: 'content',
             title: 'Content',
-            type: 'text',
+            type: 'array',
+            of: [
+                {
+                    type: 'block',
+                    lists: [
+                        { title: 'Bullet', value: 'bullet' },
+                        { title: 'Numbered', value: 'number' },
+                        { title: 'Squared', value: 'square' },
+                    ],
+                    marks: {
+                        annotations: [
+                            {
+                                name: 'link',
+                                type: 'object',
+                                title: 'Link',
+                                fields: [
+                                    {
+                                        name: 'href',
+                                        type: 'url',
+                                        title: 'Url',
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: 'image',
+                    name: 'image',
+                    title: 'Image',
+                    options: {
+                        hotspot: true,
+                    },
+                    preview: {
+                        select: {
+                            imageUrl: 'asset.url',
+                            title: 'caption',
+                        },
+                    },
+                    fields: [
+                        {
+                            name: 'alt',
+                            type: 'string',
+                            title: 'Alt Text',
+                            description:
+                                'Alternative text for screenreaders. Falls back on caption if not set',
+                        },
+                        {
+                            name: 'caption',
+                            type: 'string',
+                            title: 'Caption Text',
+                            description: 'Caption for image',
+                        },
+                    ],
+                },
+                {
+                    name: 'customTable',
+                    title: 'Custom Table',
+                    type: 'object',
+                    fields: [
+                        {
+                            title: 'Table Type',
+                            name: 'tableType',
+                            type: 'string',
+                            initialValue: 'bg-primary',
+                            options: {
+                                list: [
+                                    { title: 'Primary', value: 'bg-primary' },
+                                    {
+                                        title: 'Secondary',
+                                        value: 'bg-secondary',
+                                    },
+                                    { title: 'Tertiary', value: 'bg-tertiary' },
+                                ],
+                            },
+                        },
+                        {
+                            name: 'table',
+                            type: 'table',
+                        },
+                    ],
+                },
+            ],
         }),
     ],
+    initialValue: {
+        breadcrumbItems: [
+            { label: 'Home', link: '#' },
+            { label: 'Blog', link: '#' },
+            { label: 'Five Pizza Tips', link: '#' },
+        ],
+        title: 'Five pizza tips you need to learn now',
+        category: 'Food',
+        date: '2021-11-22',
+        image: {
+            src: 'https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/blog-content/1/cover.png',
+            alt: 'Blog Post Cover Image',
+        },
+        socialLinks: [
+            { title: 'Discord', href: '#', icon: 'facebook' },
+            { title: 'Twitter', href: '#', icon: 'instagram' },
+            { title: 'Telegram', href: '#', icon: 'twitter' },
+            { title: 'LinkedIn', href: '#', icon: 'linkedin' },
+        ],
+    },
 })

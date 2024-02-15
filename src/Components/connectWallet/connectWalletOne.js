@@ -1,33 +1,41 @@
 import React from 'react'
 
-const WalletConnectOne = ({ heading, description, walletOptions }) => {
-    // Define your data array
+const ConnectWalletOne = ({ heading, description, walletOptions }) => {
     const walletConnectData = {
         heading: 'Connect your wallet',
         description: 'Lorem ipsum dolor sit amet, consectetur.',
         walletOptions: [
             {
                 id: 1,
-                logoSrc:
-                    'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/metamask-logo.png',
+
+                logoSrc: {
+                    src: 'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/metamask-logo.png',
+                    alt: '',
+                },
                 name: 'Metamask',
             },
             {
                 id: 2,
-                logoSrc:
-                    'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/coinbase-logo.png',
+                logoSrc: {
+                    src: 'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/coinbase-logo.png',
+                    alt: 'sadfas',
+                },
                 name: 'Coinbase Wallet',
             },
             {
                 id: 3,
-                logoSrc:
-                    'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/fortmatic-logo.png',
+                logoSrc: {
+                    src: 'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/fortmatic-logo.png',
+                    alt: 'wallet image',
+                },
                 name: 'Fortmatic',
             },
             {
                 id: 4,
-                logoSrc:
-                    'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/wallet-connect-logo.png',
+                logoSrc: {
+                    src: 'https://landingfoliocom.imgix.net/store/collection/niftyui/images/connect-wallet/3/wallet-connect-logo.png',
+                    alt: 'wallet connect',
+                },
                 name: 'Wallet Connect',
             },
         ],
@@ -46,7 +54,7 @@ const WalletConnectOne = ({ heading, description, walletOptions }) => {
                 </div>
 
                 <div className="max-w-md mx-auto mt-8 border border-gray-200 divide-y divide-gray-200 rounded-xl">
-                    {walletOptions.map((wallet) => (
+                    {walletOptions?.map((wallet) => (
                         <div
                             key={wallet.id}
                             className="relative px-5 py-4 transition-all duration-200 group hover:shadow-lg"
@@ -54,8 +62,8 @@ const WalletConnectOne = ({ heading, description, walletOptions }) => {
                             <div className="flex items-center justify-between">
                                 <img
                                     className="w-auto h-8 shrink-0"
-                                    src={wallet.logoSrc}
-                                    alt=""
+                                    src={wallet.logoSrc.src}
+                                    alt={wallet.logoSrc.alt}
                                 />
                                 <p className="flex-1 ml-4 mr-auto text-base font-bold text-gray-900">
                                     {wallet.name}
@@ -94,4 +102,4 @@ const WalletConnectOne = ({ heading, description, walletOptions }) => {
     )
 }
 
-export default WalletConnectOne
+export default ConnectWalletOne

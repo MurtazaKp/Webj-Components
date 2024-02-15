@@ -2,9 +2,15 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'dashboardStepsOne',
-    title: 'Dashboard Steps',
+    title: 'Dashboard Steps ',
     type: 'object',
     fields: [
+        defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
+
         defineField({
             name: 'steps',
             title: 'Steps',
@@ -15,7 +21,7 @@ export default defineType({
                     fields: [
                         defineField({
                             name: 'id',
-                            title: 'Step ID',
+                            title: 'ID',
                             type: 'number',
                         }),
                         defineField({
@@ -32,7 +38,6 @@ export default defineType({
                 },
             ],
         }),
-        // Add more fields as needed
     ],
     initialValue: {
         steps: [

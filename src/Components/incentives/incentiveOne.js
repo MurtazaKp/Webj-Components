@@ -49,7 +49,7 @@ const IncentiveOne = ({ incentives }) => {
         <section className="py-12 bg-gray-50 sm:py-16">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="grid max-w-2xl grid-cols-1 mx-auto sm:grid-cols-2 xl:max-w-none xl:grid-cols-4 gap-x-8 gap-y-8 sm:gap-y-12">
-                    {incentives.map((feature, index) => (
+                    {incentives?.map((feature, index) => (
                         <div key={index} className="flex items-center">
                             <IncentiveLink {...feature} />
                             <div className="ml-4">

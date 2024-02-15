@@ -14,7 +14,10 @@ TableGridlOneStory.args = {
         {
             id: 1,
             name: 'Cody Fisher',
-            avatar: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-female.png',
+            avatar: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-female.png',
+                alt: 'avatar',
+            },
             product: 'Clarity Landing UI Kit',
             amount: '$49.00',
             status: 'Complete',
@@ -23,7 +26,10 @@ TableGridlOneStory.args = {
         {
             id: 2,
             name: 'Floyd Miles',
-            avatar: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-male.png',
+            avatar: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-male.png',
+                alt: 'avatar',
+            },
             product: 'Clarity eCommerce UI Kit',
             amount: '$99.00',
             status: 'Pending',
@@ -32,7 +38,10 @@ TableGridlOneStory.args = {
         {
             id: 3,
             name: 'Savannah Nguyen',
-            avatar: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-male-2.png',
+            avatar: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/table-grid/1/avatar-male-1.png',
+                alt: 'avatar',
+            },
             product: 'Clarity Landing UI Kit',
             amount: '$49.00',
             status: 'Complete',

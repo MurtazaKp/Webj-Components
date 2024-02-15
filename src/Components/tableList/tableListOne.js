@@ -12,7 +12,7 @@ const TableListOne = ({ title, headers, transactions }) => {
                     <table className="min-w-full lg:divide-y lg:divide-gray-200">
                         <thead className="table-header-group">
                             <tr>
-                                {headers.map((header, index) => (
+                                {headers?.map((header, index) => (
                                     <td
                                         key={index}
                                         className="px-6 py-4 text-sm font-medium text-gray-400 whitespace-normal"
@@ -24,7 +24,7 @@ const TableListOne = ({ title, headers, transactions }) => {
                         </thead>
 
                         <tbody className="divide-y divide-gray-200">
-                            {transactions.map((transaction) => (
+                            {transactions?.map((transaction) => (
                                 <tr key={transaction.id}>
                                     <td
                                         width="50%"

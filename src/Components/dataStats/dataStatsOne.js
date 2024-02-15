@@ -30,7 +30,7 @@ const StatsDataOne = ({ DataStats }) => {
         <div className="py-12 bg-gray-50 sm:py-16 lg:py-20">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="grid max-w-5xl grid-cols-1 gap-5 mx-auto sm:grid-cols-2 lg:grid-cols-4">
-                    {DataStats.map((stat, index) => (
+                    {DataStats?.map((stat, index) => (
                         <div
                             key={index}
                             className="bg-white border border-gray-200 rounded-xl"

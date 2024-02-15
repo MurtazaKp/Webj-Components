@@ -23,11 +23,11 @@ const AuthorDetailsOne = ({ name, description, socialLinks, image }) => {
                 <div className="max-w-2xl mx-auto overflow-hidden bg-white border border-gray-200">
                     <div className="px-4 py-5 sm:p-6 lg:p-8">
                         <div className="sm:flex sm:items-start">
-                            <img
-                                className="object-cover w-32 h-32 rounded-full shrink-0"
-                                src={image.src}
-                                alt={image.alt}
-                            />
+                        {image && <img
+                            className="object-cover w-32 h-32 rounded-full shrink-0"
+                            src={image.src}
+                            alt={image.alt}
+                        />}
 
                             <div className="mt-6 sm:mt-0 sm:ml-8">
                                 <p className="text-lg font-bold text-gray-900 uppercase">
@@ -38,7 +38,7 @@ const AuthorDetailsOne = ({ name, description, socialLinks, image }) => {
                                 </p>
 
                                 <div className="flex items-center mt-6 space-x-3">
-                                    {socialLinks.map((link, index) => {
+                                    {socialLinks?.map((link, index) => {
                                         return (
                                             <>
                                                 <a

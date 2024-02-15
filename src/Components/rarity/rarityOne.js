@@ -63,21 +63,25 @@ const RarityOne = ({
                     <div className="lg:flex">
                         {/* Image Section */}
                         <div className="h-auto lg:w-64 xl:w-80 shrink-0">
-                            <img
-                                className="object-cover w-full h-auto mx-auto lg:mx-0 rounded-xl"
-                                src={imageUrl.src}
-                                alt={imageUrl.alt}
-                            />
+                            {imageUrl && (
+                                <img
+                                    className="object-cover w-full h-auto mx-auto lg:mx-0 rounded-xl"
+                                    src={imageUrl.src}
+                                    alt={imageUrl.alt}
+                                />
+                            )}
 
                             <div className="mt-5">
-                                <a
-                                    href={openSeaButton.href}
-                                    title=""
-                                    className="inline-flex items-center justify-center w-full px-5 py-3 text-xs font-bold tracking-widest text-gray-500 uppercase transition-all duration-200 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 hover:bg-gray-100 hover:text-gray-900"
-                                    role="button"
-                                >
-                                    {openSeaButton.label}
-                                </a>
+                                {openSeaButton && (
+                                    <a
+                                        href={openSeaButton.href}
+                                        title=""
+                                        className="inline-flex items-center justify-center w-full px-5 py-3 text-xs font-bold tracking-widest text-gray-500 uppercase transition-all duration-200 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 hover:bg-gray-100 hover:text-gray-900"
+                                        role="button"
+                                    >
+                                        {openSeaButton.label}
+                                    </a>
+                                )}
                             </div>
                         </div>
 
@@ -85,28 +89,34 @@ const RarityOne = ({
                         <div className="mt-8 lg:mt-0 lg:flex-1 lg:ml-12">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-xl font-bold text-gray-900">
-                                        {rarityRank.label}
-                                        {rarityRank.value}
-                                    </p>
+                                    {rarityRank && (
+                                        <p className="text-xl font-bold text-gray-900">
+                                            {rarityRank.label}
+                                            {rarityRank.value}
+                                        </p>
+                                    )}
                                     <p className="mt-1 text-sm font-medium text-gray-500">
                                         ID: {apeId}
                                     </p>
                                 </div>
 
                                 <div className="text-right">
-                                    <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
-                                        {rarityScore.label}
-                                    </p>
-                                    <p className="mt-1 text-lg font-bold text-indigo-600">
-                                        {rarityScore.value}
-                                    </p>
+                                    {rarityScore && (
+                                        <>
+                                            <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
+                                                {rarityScore.label}
+                                            </p>
+                                            <p className="mt-1 text-lg font-bold text-indigo-600">
+                                                {rarityScore.value}
+                                            </p>
+                                        </>
+                                    )}
                                 </div>
                             </div>
 
                             {/* Categories Grid */}
                             <div className="grid grid-cols-2 gap-3 mt-6 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
-                                {categories.map((category, index) => (
+                                {categories?.map((category, index) => (
                                     <div
                                         key={index}
                                         className="bg-white border border-gray-200 rounded-md"

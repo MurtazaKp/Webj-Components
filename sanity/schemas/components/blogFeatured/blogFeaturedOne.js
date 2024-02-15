@@ -2,9 +2,14 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'blogFeaturedOne',
-    title: 'Blog Featured',
+    title: 'Blog Feature',
     type: 'object',
     fields: [
+        defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
         defineField({
             name: 'image',
             title: 'Image',
@@ -13,7 +18,7 @@ export default defineType({
                 defineField({
                     name: 'src',
                     title: 'Source',
-                    type: 'url', // Assuming the source is a URL
+                    type: 'image',
                 }),
                 defineField({
                     name: 'alt',
@@ -27,6 +32,7 @@ export default defineType({
             title: 'Category',
             type: 'string',
         }),
+
         defineField({
             name: 'title',
             title: 'Title',
@@ -35,7 +41,7 @@ export default defineType({
         defineField({
             name: 'date',
             title: 'Date',
-            type: 'date',
+            type: 'string',
         }),
         defineField({
             name: 'content',
@@ -55,9 +61,18 @@ export default defineType({
                 defineField({
                     name: 'href',
                     title: 'URL',
-                    type: 'url',
+                    type: 'string',
                 }),
             ],
         }),
     ],
+    initialValue: {
+      
+        category: 'Featured',
+        title: 'How to write content about your photographs',
+        date: 'April 09, 2022',
+        content:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis commodo magna risus maecenas nisl sed cras lacus, vestibulum. Dictum nisi amet.',
+        buttonLink: { label: 'Read Full Article', href: '#' },
+    },
 })

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TableGrid = () => {
+const TableGrid = ({ heading, payments }) => {
     // Define your data array
     const componentData = {
         heading: 'Latest Payments',
@@ -41,12 +41,12 @@ const TableGrid = () => {
                 <div className="max-w-lg mx-auto">
                     <div>
                         <h2 className="text-lg font-bold text-gray-900">
-                            {componentData.heading}
+                            {heading}
                         </h2>
                     </div>
 
                     <ul className="mt-6 space-y-4">
-                        {componentData.payments.map((payment) => (
+                        {payments?.map((payment) => (
                             <li
                                 key={payment.id}
                                 className="bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl"
@@ -56,8 +56,8 @@ const TableGrid = () => {
                                         <div className="flex items-center">
                                             <img
                                                 className="flex-shrink-0 object-cover rounded-full w-9 h-9"
-                                                src={payment.avatar}
-                                                alt={payment.name}
+                                                src={payment.avatar.src}
+                                                alt={payment.avatar.alt}
                                             />
                                             <div className="ml-3">
                                                 <p className="text-sm font-medium text-gray-500">

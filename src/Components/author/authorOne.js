@@ -42,12 +42,12 @@ const AuthorOne = ({ authors, heading, description }) => {
                 </div>
 
                 <div className="grid grid-cols-1 px-12 mt-12 sm:mt-16 gap-y-12 sm:gap-x-10 sm:grid-cols-2 sm:px-0 xl:grid-cols-2 lg:mt-20">
-                    {authors.map((author, index) => (
+                    {authors?.map((author, index) => (
                         <div key={index} className="xl:items-stretch xl:flex">
                             <img
                                 className="object-cover w-auto h-64 shrink-0 rounded-xl"
-                                src={author.image}
-                                alt={`Author ${index + 1}`}
+                                src={author.image.src}
+                                alt={author.image.alt}
                             />
 
                             <div className="flex flex-col justify-between flex-1 mt-6 xl:mt-0 xl:ml-10">

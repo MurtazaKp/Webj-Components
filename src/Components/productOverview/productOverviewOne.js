@@ -31,17 +31,19 @@ const ProductOverviewOne = ({ imageUrl, productFeatures }) => {
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div className="grid items-center max-w-6xl grid-cols-1 mx-auto gap-y-8 md:gap-y-10 lg:grid-cols-2 lg:gap-x-12 xl:gap-x-24">
                     <div>
-                        <img
-                            className="object-cover w-full"
-                            src={imageUrl.src}
-                            alt={imageUrl.alt}
-                        />
+                        {imageUrl && (
+                            <img
+                                className="object-cover w-full"
+                                src={imageUrl.src}
+                                alt={imageUrl.alt}
+                            />
+                        )}
                     </div>
 
                     <div className="xl:pr-24">
                         <div className="flow-root">
                             <ul className="-my-6 divide-y divide-gray-200 xl:-my-8">
-                                {productFeatures.map((feature, index) => (
+                                {productFeatures?.map((feature, index) => (
                                     <li key={index} className="py-5 xl:py-7">
                                         <p className="text-lg font-bold text-gray-900">
                                             {feature.title}

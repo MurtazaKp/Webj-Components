@@ -35,12 +35,49 @@ export default defineType({
                         }),
                         defineField({
                             name: 'imageUrl',
-                            title: 'Image URL',
-                            type: 'url',
+                            title: 'image',
+                            type: 'object',
+                            fields: [
+                                defineField({
+                                    name: 'src',
+                                    title: 'Source',
+                                    type: 'image',
+                                }),
+                                defineField({
+                                    name: 'alt',
+                                    title: 'Alt Text',
+                                    type: 'string',
+                                }),
+                            ],
                         }),
                     ],
                 },
             ],
         }),
     ],
+    initialValue: {
+        heading: 'Select your customer',
+        customers: [
+            {
+                id: 1,
+                name: 'Arlene McCoy',
+                role: 'UI/UX Designer',
+            },
+            {
+                id: 2,
+                name: 'Kathryn Murphy',
+                role: 'Software Developer',
+            },
+            {
+                id: 3,
+                name: 'Wade Warren',
+                role: 'Team Leader',
+            },
+            {
+                id: 4,
+                name: 'Bessie Cooper',
+                role: 'Project Manager',
+            },
+        ],
+    },
 })

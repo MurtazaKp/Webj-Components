@@ -13,7 +13,7 @@ export default defineType({
         defineField({
             name: 'description',
             title: 'Description',
-            type: 'text',
+            type: 'string',
         }),
         defineField({
             name: 'images',
@@ -25,7 +25,7 @@ export default defineType({
                     fields: [
                         defineField({
                             name: 'src',
-                            title: 'Image Source',
+                            title: 'Source',
                             type: 'image',
                         }),
                         defineField({
@@ -38,4 +38,9 @@ export default defineType({
             ],
         }),
     ],
+    initialValue: {
+        heading: 'Get access to rare NFTs',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum tortor cum dictum nulla. Ipsum eget faucibus facilisis turpis viverra malesuada tellus.',
+    },
 })

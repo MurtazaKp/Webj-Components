@@ -13,8 +13,8 @@ const Avatar = ({ image, type }) => {
                             ' w-12 h-12 ': type === 'large',
                             ' w-14 h-14 ': type === 'xl',
                         })}
-                        src={image.src}
-                        alt={image.alt}
+                        src={image?.src}
+                        alt={image?.alt}
                     />
                 </div>
             </div>

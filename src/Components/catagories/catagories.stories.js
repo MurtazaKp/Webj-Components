@@ -17,38 +17,50 @@ CatagoryOneStory.args = {
     },
     catagories: [
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/smart-watches.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/smart-watches.png',
+                alt: 'Smart watch',
+            },
             title: 'Smart Watches',
             link: '#',
         },
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/wireless-earphone.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/wireless-earphone.png',
+                alt: 'wireless earphone',
+            },
             title: 'True Wireless Earphone',
             link: '#',
         },
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/wireless-headphone.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/wireless-headphone.png',
+                alt: 'headphone',
+            },
             title: 'Wireless Headphone',
             link: '#',
         },
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/smart-phones.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/smart-phone.png',
+                alt: 'headphone',
+            },
             title: 'Smart Phones',
             link: '#',
         },
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/runnies-shoes.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/running-shoes.png',
+                alt: 'headphone',
+            },
             title: 'Running Shoes',
             link: '#',
         },
         {
-            imageSrc:
-                'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/leather-items.png',
+            imageSrc: {
+                src: 'https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/categories/2/leather-items.png',
+                alt: 'leather items',
+            },
             title: 'Leather Items',
             link: '#',
         },

@@ -1,4 +1,5 @@
 import React from 'react'
+import { CustomPortableText } from '../Custom Portable Text/CustomerPortable'
 
 const ArticleOne = ({ subheading, date, heading, content }) => {
     const blogData = {
@@ -194,6 +195,7 @@ const ArticleOne = ({ subheading, date, heading, content }) => {
                                 __html: content,
                             }}
                         />
+                        <CustomPortableText value={content} />
                     </div>
                 </div>
             </div>

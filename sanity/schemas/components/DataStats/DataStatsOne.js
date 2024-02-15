@@ -6,8 +6,13 @@ export default defineType({
     type: 'object',
     fields: [
         defineField({
-            name: 'Datastats',
-            title: 'Stats',
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
+        defineField({
+            name: 'DataStats',
+            title: 'Data Stats',
             type: 'array',
             of: [
                 {
@@ -29,6 +34,28 @@ export default defineType({
                             type: 'string',
                         }),
                     ],
+                },
+            ],
+            initialValue: [
+                {
+                    label: "Today's Sale",
+                    value: '$12,426',
+                    percentage: '+36%',
+                },
+                {
+                    label: 'Active Users',
+                    value: '4,395',
+                    percentage: '+36%',
+                },
+                {
+                    label: "Today's Revenue",
+                    value: '$10,593',
+                    percentage: '+36%',
+                },
+                {
+                    label: 'Growth Sale',
+                    value: '$1,940',
+                    percentage: '+36%',
                 },
             ],
         }),

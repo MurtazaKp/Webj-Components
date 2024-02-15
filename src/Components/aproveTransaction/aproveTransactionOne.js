@@ -4,7 +4,7 @@ const ApproveTransactionOne = ({
     title,
     description,
     product,
-    sumbitButtonCta,
+    submitButtonCta,
 }) => {
     const transactionData = {
         title: 'Approve This Transaction?',
@@ -67,23 +67,25 @@ const ApproveTransactionOne = ({
 
                     <div className="mt-8 bg-white border border-gray-200 rounded-xl">
                         <div className="p-4">
-                            <div className="flex items-center">
-                                <img
-                                    className="object-cover w-auto rounded-lg shrink-0 h-14"
-                                    src={product.image.src}
-                                    alt={product.image.alt}
-                                />
+                            {product && (
+                                <div className="flex items-center">
+                                    <img
+                                        className="object-cover w-auto rounded-lg shrink-0 h-14"
+                                        src={product.image.src}
+                                        alt={product.image.alt}
+                                    />
 
-                                <div className="flex-1 ml-4">
-                                    <p className="text-base font-bold text-gray-900">
-                                        {product.name}
-                                    </p>
-                                    <p className="mt-1 text-sm font-medium text-gray-500">
-                                        {product.quantityText}
-                                        {product.quantity}
-                                    </p>
+                                    <div className="flex-1 ml-4">
+                                        <p className="text-base font-bold text-gray-900">
+                                            {product.name}
+                                        </p>
+                                        <p className="mt-1 text-sm font-medium text-gray-500">
+                                            {product.quantityText}
+                                            {product.quantity}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
 
@@ -93,7 +95,7 @@ const ApproveTransactionOne = ({
                             onClick={handleSubmit}
                             className="inline-flex items-center justify-center w-full px-6 py-4 text-xs font-bold tracking-widest text-white uppercase transition-all duration-200 bg-gray-900 border border-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-700"
                         >
-                            {sumbitButtonCta.label}
+                            {submitButtonCta?.label}
                         </button>
                     </div>
                 </div>

@@ -67,33 +67,35 @@ const CatagoryOne = ({
                     </div>
 
                     <div className="hidden md:block">
-                        <a
-                            href={allCatagoriesCta.href}
-                            title=""
-                            className="inline-flex items-center p-1 -m-1 text-xs font-bold tracking-wide text-gray-400 uppercase transition-all duration-200 rounded hover:text-gray-900 focus:ring-2 focus:text-gray-900 focus:ring-gray-900 focus:ring-offset-2 focus:outline-none"
-                            role="button"
-                        >
-                            {allCatagoriesCta.label}
-                            <svg
-                                className="w-4 h-4 ml-1.5 -mt-0.5"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                        {allCatagoriesCta && (
+                            <a
+                                href={allCatagoriesCta.href}
+                                title=""
+                                className="inline-flex items-center p-1 -m-1 text-xs font-bold tracking-wide text-gray-400 uppercase transition-all duration-200 rounded hover:text-gray-900 focus:ring-2 focus:text-gray-900 focus:ring-gray-900 focus:ring-offset-2 focus:outline-none"
+                                role="button"
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                ></path>
-                            </svg>
-                        </a>
+                                {allCatagoriesCta.label}
+                                <svg
+                                    className="w-4 h-4 ml-1.5 -mt-0.5"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    ></path>
+                                </svg>
+                            </a>
+                        )}
                     </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-5 mt-8 text-center sm:mt-12 sm:grid-cols-3 xl:grid-cols-6 sm:gap-6">
-                    {catagories.map((category, index) => (
+                    {catagories?.map((category, index) => (
                         <div
                             key={index}
                             className="relative transition-all duration-300 bg-gray-100 rounded-xl hover:shadow-xl hover:bg-white"
@@ -101,7 +103,7 @@ const CatagoryOne = ({
                             <div className="px-4 py-5 sm:p-6">
                                 <img
                                     className="object-cover w-24 h-24 mx-auto border border-gray-200 rounded-full"
-                                    src={category.imageSrc}
+                                    src={category.imageSrc.src}
                                     alt=""
                                 />
                                 <p className="mt-5 text-base font-bold text-gray-900">

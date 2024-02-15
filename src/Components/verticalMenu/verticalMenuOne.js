@@ -68,11 +68,13 @@ const VerticalMenu = ({ logo, menus, avatar }) => {
             <div className="hidden md:flex md:w-64 md:flex-col">
                 <div className="flex flex-col flex-grow pt-5 overflow-y-auto bg-white">
                     <div className="flex items-center flex-shrink-0 px-4">
-                        <img
-                            className="w-auto h-8"
-                            src={logo.src}
-                            alt={logo.alt}
-                        />
+                        {logo && (
+                            <img
+                                className="w-auto h-8"
+                                src={logo.src}
+                                alt={logo.alt}
+                            />
+                        )}
                     </div>
 
                     <div className="px-4 mt-8">
@@ -115,7 +117,7 @@ const VerticalMenu = ({ logo, menus, avatar }) => {
                     <div className="flex flex-col flex-1 px-3 mt-6">
                         <div className="space-y-4">
                             <nav className="flex-1 space-y-2">
-                                {menus.map((menuItem) => (
+                                {menus?.map((menuItem) => (
                                     <a
                                         key={menuItem.id}
                                         href="#"
@@ -140,12 +142,15 @@ const VerticalMenu = ({ logo, menus, avatar }) => {
                                 type="button"
                                 className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-gray-900 transition-all duration-200 rounded-lg hover:bg-gray-100"
                             >
-                                <img
-                                    className="flex-shrink-0 object-cover w-6 h-6 mr-3 rounded-full"
-                                    src={avatar.image.src}
-                                    alt={avatar.image.alt}
-                                />
-                                {avatar.name}
+                                {avatar && (
+                                    <img
+                                        className="flex-shrink-0 object-cover w-6 h-6 mr-3 rounded-full"
+                                        src={avatar.image.src}
+                                        alt={avatar.image.alt}
+                                    />
+                                )}
+                                {avatar?.name}
+
                                 <svg
                                     className="w-5 h-5 ml-auto"
                                     xmlns="http://www.w3.org/2000/svg"

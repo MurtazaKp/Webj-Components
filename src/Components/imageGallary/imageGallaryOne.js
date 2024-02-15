@@ -63,7 +63,7 @@ const ImageGalleryOne = ({ heading, description, images }) => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-12 -mx-4 sm:-mx-6 lg:mx-0 sm:mt-16 lg:mt-20">
-                    {images.map((image, index) => (
+                    {images?.map((image, index) => (
                         <div key={index}>
                             <img
                                 src={image.src}

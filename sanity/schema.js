@@ -1,5 +1,5 @@
 import components from './schemas/components'
-import blogAuthorOne from './schemas/components/BlogAuthor/blogAuthorOne'
+import blogAuthorOne from './schemas/components/authorDetails/authorDetailsOne'
 import DataStatsOne from './schemas/components/DataStats/DataStatsOne'
 import incentiveOne from './schemas/components/IncentiveOne/incentiveOne'
 import aboutOne from './schemas/components/about/aboutOne'
@@ -52,6 +52,8 @@ import teamOne from './schemas/components/team/teamOne'
 import testimonialOne from './schemas/components/testimonials/testimonialOne'
 import transactionProgressOne from './schemas/components/transactionProgress/transactionProgressOne'
 import verticalMenu from './schemas/components/verticalMenu/verticalMenu'
+import button from './schemas/components/button/button'
+import avatarOne from './schemas/components/avatar/avatarOne'
 
 export const schema = {
     types: [
@@ -109,5 +111,7 @@ export const schema = {
         homeSidebarOne,
         verticalMenu,
         incentiveOne,
+        button,
+        avatarOne,
     ],
 }

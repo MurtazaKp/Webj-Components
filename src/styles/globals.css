@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.ant-drawer-content-wrapper {
+    right: 10px !important;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.ant-drawer-mask {
+    display: none;
+}
+
+.ant-drawer-close {
+    position: absolute;
+    right: 5px;
+}
+.ant-modal-footer {
+    display: none;
+}
+
+.appeal-modal .ant-modal-content {
+    padding: 0 !important;
+}
+
+.appeal-modal {
+    width: 70% !important;
+}
+
+.ql-toolbar {
+    border-radius: 12px 12px 0px 0px;
+}
