@@ -36,7 +36,7 @@ const BreadcrumbOne = ({ breadcrumbItems }) => {
                                 />
                             </svg>
                         </Link>
-                        {breadcrumbItems.map((item, index) => (
+                        {breadcrumbItems?.map((item, index) => (
                             <li
                                 key={index}
                                 className={`flex items-center space-x-3 ${
@@ -45,7 +45,7 @@ const BreadcrumbOne = ({ breadcrumbItems }) => {
                                         : 'text-gray-500 hover:text-gray-900'
                                 }`}
                             >
-                                {index !== breadcrumbItems.length - 1 && (
+                                {index !== breadcrumbItems.length  && (
                                     <svg
                                         className="flex-shrink-0 w-4 h-4"
                                         xmlns="http://www.w3.org/2000/svg"

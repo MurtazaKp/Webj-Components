@@ -5,7 +5,7 @@ const Button = ({ type, label }) => {
         <button
             type="button"
             className={classNames(
-                'inline-flex items-center justify-center px-6 py-3 text-sm font-semibold leading-5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
+                'inline-flex items-center justify-center px-6 py-3 my-6 text-sm font-semibold leading-5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
                 {
                     'bg-indigo-600 border text-white border-transparent rounded-md focus:ring-indigo-600 hover:bg-indigo-500':
                         type === 'primary',

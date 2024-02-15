@@ -64,13 +64,13 @@ const TransactionProgressOne = ({ buttonText, description, title }) => {
                             {description}
                         </p>
                         <div className="mt-8">
-                            <a
+                           {buttonText && <a
                                 type="button"
                                 href={buttonText.href}
                                 className="inline-flex items-center justify-center w-full px-6 py-4 text-xs font-bold tracking-widest text-gray-900 uppercase transition-all duration-200 bg-transparent border border-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 hover:text-white"
                             >
                                 {buttonText.label}
-                            </a>
+                            </a>}
                         </div>
                     </div>
                 </div>

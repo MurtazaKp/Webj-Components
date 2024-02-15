@@ -15,29 +15,37 @@ selectBoxStory.args = {
             id: 1,
             name: 'Arlene McCoy',
             role: 'UI/UX Designer',
-            imageUrl:
-                'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-female.png',
+            imageUrl: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-female.png',
+                alt: 'avatar',
+            },
         },
         {
             id: 2,
             name: 'Kathryn Murphy',
             role: 'Software Developer',
-            imageUrl:
-                'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-male.png',
+            imageUrl: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-male.png',
+                alt: 'avatar',
+            },
         },
         {
             id: 3,
             name: 'Wade Warren',
             role: 'Team Leader',
-            imageUrl:
-                'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-female-2.png',
+            imageUrl: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-female-2.png',
+                alt: 'avatar',
+            },
         },
         {
             id: 4,
             name: 'Bessie Cooper',
             role: 'Project Manager',
-            imageUrl:
-                'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-male-2.png',
+            imageUrl: {
+                src: 'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/select-box/2/avatar-male-2.png',
+                alt: 'avatar',
+            },
         },
     ],
 }

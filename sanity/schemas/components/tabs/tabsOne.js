@@ -2,9 +2,14 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'tabsOne',
-    title: 'Tabs ',
+    title: 'Tab',
     type: 'object',
     fields: [
+        defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
         defineField({
             name: 'tabs',
             title: 'Tabs',
@@ -25,6 +30,13 @@ export default defineType({
                         }),
                     ],
                 },
+            ],
+            initialValue: [
+                { id: 1, label: 'Dashboard' },
+                { id: 2, label: 'My Account' },
+                { id: 3, label: 'Downloads' },
+                { id: 4, label: 'Licenses' },
+                { id: 5, label: 'Settings' },
             ],
         }),
     ],

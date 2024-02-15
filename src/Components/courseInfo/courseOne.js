@@ -55,7 +55,7 @@ const CourseInfoOne = ({ mainTitle, mainParagraph, communities }) => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 mt-12 lg:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-                    {communities.map((community, index) => (
+                    {communities?.map((community, index) => (
                         <div
                             key={index}
                             className="transition-all duration-200 border rounded-lg border-neutral hover:bg-dark-gray"

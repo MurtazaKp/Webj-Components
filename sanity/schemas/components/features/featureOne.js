@@ -6,13 +6,13 @@ export default defineType({
     type: 'object',
     fields: [
         defineField({
-            name: 'heading',
-            title: 'heading',
+            name: 'name',
+            title: 'name',
             type: 'string',
         }),
         defineField({
-            name: 'feature',
-            title: 'name',
+            name: 'heading',
+            title: 'heading',
             type: 'string',
         }),
 

@@ -6,6 +6,11 @@ export default defineType({
     type: 'object',
     fields: [
         defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
+        defineField({
             name: 'title',
             title: 'Title',
             type: 'string',
@@ -13,12 +18,24 @@ export default defineType({
         defineField({
             name: 'description',
             title: 'Description',
-            type: 'text',
+            type: 'string',
         }),
         defineField({
             name: 'image',
             title: 'Image',
-            type: 'image',
+            type: 'object',
+            fields: [
+                defineField({
+                    name: 'src',
+                    title: 'Source',
+                    type: 'image',
+                }),
+                defineField({
+                    name: 'alt',
+                    title: 'Alt Text',
+                    type: 'string',
+                }),
+            ],
         }),
         defineField({
             name: 'email',
@@ -53,4 +70,17 @@ export default defineType({
             type: 'string',
         }),
     ],
+    initialValue: {
+        title: 'Download free eBook of best growth tips.',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa enim.',
+
+        email: {
+            label: 'Email',
+            type: 'email',
+            placeholder: 'Enter email address',
+            initialEmail: '',
+        },
+        DownloadButtonText: 'Download E-Book',
+    },
 })

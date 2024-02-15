@@ -16,19 +16,21 @@ const FeatureDropsOne = ({ heading, description, link, items }) => {
                             {description}
                         </p>
                         <div className="mt-4">
-                            <a
-                                href={link.url}
-                                title=""
-                                className="pb-2 text-sm font-medium text-gray-900 transition-all duration-200 border-b border-gray-900"
-                            >
-                                {link.text}
-                            </a>
+                            {link && (
+                                <a
+                                    href={link.href}
+                                    title=""
+                                    className="pb-2 text-sm font-medium text-gray-900 transition-all duration-200 border-b border-gray-900"
+                                >
+                                    {link.text}
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 px-6 mt-12 sm:mt-16 sm:px-0 sm:gap-6 sm:grid-cols-2 xl:grid-cols-4">
-                    {items.map((item) => (
+                    {items?.map((item) => (
                         <div
                             key={item.id}
                             className="relative overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 rounded-lg hover:shadow-lg group hover:-translate-y-1"
@@ -73,7 +75,7 @@ const FeatureDropsOne = ({ heading, description, link, items }) => {
                                                     <img
                                                         key={index}
                                                         className="inline-block w-8 h-8 rounded-full ring-2 ring-white"
-                                                        src={avatar}
+                                                        src={avatar.src}
                                                         alt="avatar"
                                                     />
                                                 )

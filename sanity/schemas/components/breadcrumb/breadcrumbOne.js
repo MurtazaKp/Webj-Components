@@ -6,6 +6,11 @@ export default defineType({
     type: 'object',
     fields: [
         defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
+        defineField({
             name: 'breadcrumbItems',
             title: 'Breadcrumb Items',
             type: 'array',
@@ -29,6 +34,23 @@ export default defineType({
                             type: 'string',
                         }),
                     ],
+                },
+            ],
+            initialValue: [
+                {
+                    label: 'Reports',
+                    link: '#',
+                    title: 'View Reports',
+                },
+                {
+                    label: 'Sales',
+                    link: '#',
+                    title: 'View Sales',
+                },
+                {
+                    label: 'Product Reports',
+                    link: '#',
+                    title: 'View Product Reports',
                 },
             ],
         }),

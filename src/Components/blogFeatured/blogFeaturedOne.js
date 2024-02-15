@@ -1,6 +1,6 @@
 import React from 'react'
 
-const blogFeaturedOne = ({
+const BlogFeaturedOne = ({
     image,
     category,
     title,
@@ -26,11 +26,11 @@ const blogFeaturedOne = ({
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div className="relative overflow-hidden rounded-xl">
                     <div className="absolute inset-0">
-                        <img
+                        {image && <img
                             className="object-cover w-full h-full"
                             src={image.src}
                             alt={image.alt}
-                        />
+                        />}
                     </div>
                     <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-r from-gray-900 via-gray-900/50 lg:via-gray-900/20 to-transparent"></div>
 
@@ -51,14 +51,14 @@ const blogFeaturedOne = ({
                             {content}
                         </p>
                         <div className="mt-12">
-                            <a
+                         {buttonLink &&   <a
                                 href={buttonLink.href}
                                 title=""
                                 className="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                                 role="button"
                             >
                                 {buttonLink.label}
-                            </a>
+                            </a>}
                         </div>
                     </div>
                 </div>
@@ -67,4 +67,4 @@ const blogFeaturedOne = ({
     )
 }
 
-export default blogFeaturedOne
+export default BlogFeaturedOne

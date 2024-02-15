@@ -58,7 +58,7 @@ const SelectBox = ({ customers, heading }) => {
                     <p className="text-sm font-bold text-gray-900">{heading}</p>
 
                     <div className="mt-4 overflow-auto bg-white border border-gray-200 divide-y divide-gray-200 rounded-xl">
-                        {customers.map((customer) => (
+                        {customers?.map((customer) => (
                             <div
                                 key={customer.id}
                                 onClick={() => handleSelection(customer.id)}
@@ -71,7 +71,7 @@ const SelectBox = ({ customers, heading }) => {
                                 <div className="flex items-center justify-between">
                                     <img
                                         className="flex-shrink-0 object-cover rounded-full w-9 h-9"
-                                        src={customer.imageUrl}
+                                        src={customer.imageUrl.src}
                                         alt=""
                                     />
                                     <div className="flex-1 min-w-0 ml-4">

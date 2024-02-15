@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'catagoryOne',
-    title: 'Popular Categories Data',
+    title: 'Catagory',
     type: 'object',
     fields: [
         defineField({
@@ -13,7 +13,7 @@ export default defineType({
         defineField({
             name: 'description',
             title: 'Description',
-            type: 'text',
+            type: 'string',
         }),
         defineField({
             name: 'allCatagoriesCta',
@@ -41,21 +41,59 @@ export default defineType({
                     type: 'object',
                     fields: [
                         defineField({
-                            name: 'imageSrc',
-                            title: 'Image Source',
-                            type: 'image',
-                        }),
-                        defineField({
                             name: 'title',
-                            title: 'Category Title',
+                            title: 'Title',
                             type: 'string',
                         }),
                         defineField({
                             name: 'link',
-                            title: 'Category Link',
+                            title: 'Link',
                             type: 'string',
                         }),
+                        defineField({
+                            name: 'imageSrc',
+                            title: 'Image',
+                            type: 'object',
+                            fields: [
+                                defineField({
+                                    name: 'src',
+                                    title: 'Source',
+                                    type: 'image',
+                                }),
+                                defineField({
+                                    name: 'alt',
+                                    title: 'Alt Text',
+                                    type: 'string',
+                                }),
+                            ],
+                        }),
                     ],
+                },
+            ],
+            initialValue: [
+                {
+                    title: 'Smart Watches',
+                    link: '#',
+                },
+                {
+                    title: 'True Wireless Earphone',
+                    link: '#',
+                },
+                {
+                    title: 'Wireless Headphone',
+                    link: '#',
+                },
+                {
+                    title: 'Smart Phones',
+                    link: '#',
+                },
+                {
+                    title: 'Running Shoes',
+                    link: '#',
+                },
+                {
+                    title: 'Leather Items',
+                    link: '#',
                 },
             ],
         }),

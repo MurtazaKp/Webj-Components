@@ -23,7 +23,7 @@ approveTransactionOneStory.args = {
             alt: 'Product Thumbnail',
         },
     },
-    sumbitButtonCta: {
+    submitButtonCta: {
         label: 'Submit',
     },
 }

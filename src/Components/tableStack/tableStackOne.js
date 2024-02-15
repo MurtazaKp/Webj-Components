@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const TableStackOne = ({ heading, description, customerList }) => {
+const TableStackOne = ({ heading, description, CustomerList }) => {
     // Declare and initialize the data
     const tableStackData = {
         heading: 'Customer List',
@@ -48,7 +48,7 @@ const TableStackOne = ({ heading, description, customerList }) => {
                         </div>
 
                         <div className="mt-6 space-y-3">
-                            {customerList.map((customer) => (
+                            {CustomerList?.map((customer) => (
                                 <div
                                     key={customer.id}
                                     className="overflow-hidden bg-white shadow-sm rounded-xl"
@@ -58,7 +58,7 @@ const TableStackOne = ({ heading, description, customerList }) => {
                                             <div className="flex items-center flex-1">
                                                 <img
                                                     className="flex-shrink-0 object-cover w-10 h-10 rounded-full"
-                                                    src={customer.avatar}
+                                                    src={customer.avatar.src}
                                                     alt=""
                                                 />
                                                 <div className="flex-1 min-w-0 ml-4">

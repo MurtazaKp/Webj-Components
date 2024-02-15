@@ -11,8 +11,11 @@ export const PageTitleOneStory = PageTitleOneTemplate.bind({})
 PageTitleOneStory.args = {
     heading: 'Customer Review',
     breadcrumbs: [
-        { icon: true, text: 'Home' },
-        { icon: true, text: 'Analytics' },
-        { icon: true, text: 'Customer Review' },
+        { icon: true, cta: { label: 'Home', href: '/' } },
+        { icon: true, cta: { label: 'Analytics', href: '/analytics' } },
+        {
+            icon: true,
+            cta: { label: 'Customer Review', href: '/customer-review' },
+        },
     ],
 }

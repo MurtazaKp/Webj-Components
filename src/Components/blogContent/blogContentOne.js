@@ -1,5 +1,7 @@
 import React from 'react'
 import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from './icon'
+import { PortableText } from '@portabletext/react'
+import { CustomPortableText } from '../Custom Portable Text/CustomerPortable'
 
 const BlogContentOne = ({
     breadcrumbItems,
@@ -99,7 +101,7 @@ const BlogContentOne = ({
                     {/* Breadcrumbs */}
                     <nav className="flex items-center justify-center">
                         <ol className="flex items-center space-x-2">
-                            {breadcrumbItems.map((item, index) => (
+                            {breadcrumbItems?.map((item, index) => (
                                 <>
                                     <li key={index}>
                                         <a
@@ -146,18 +148,18 @@ const BlogContentOne = ({
 
                 {/* Blog Post Cover Image */}
                 <div className="mt-8 sm:mt-12 lg:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
-                    <img
+                   {image && <img
                         className="object-cover w-full h-full"
                         src={image.src}
                         alt={image.alt}
-                    />
+                    />}
                 </div>
 
                 {/* Social Links */}
                 <div className="grid grid-cols-1 mt-8 sm:mt-12 lg:mt-16 lg:grid-cols-12 lg:gap-x-12 gap-y-8">
                     <div className="lg:col-span-2 lg:self-start lg:sticky lg:top-6 lg:order-last">
                         <ul className="flex space-x-3 lg:space-x-0 lg:space-y-4 lg:flex-col lg:items-center">
-                            {socialLinks.map((item, index) => (
+                            {socialLinks?.map((item, index) => (
                                 <li key={index}>
                                     <a
                                         href={item.href}
@@ -181,6 +183,7 @@ const BlogContentOne = ({
                     <article className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-lg prose-blockquote:leading-8">
                         {/* Use dangerouslySetInnerHTML to render HTML content */}
                         <div dangerouslySetInnerHTML={{ __html: content }} />
+                        <CustomPortableText value={content} />
                     </article>
                 </div>
             </div>

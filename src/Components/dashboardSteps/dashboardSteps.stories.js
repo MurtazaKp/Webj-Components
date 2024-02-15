@@ -9,7 +9,6 @@ const DashboardStepsOneTemplate = (args) => <DashboardStepsOne {...args} />
 
 export const DashboardStepsOneStory = DashboardStepsOneTemplate.bind({})
 DashboardStepsOneStory.args = {
-    heading: 'dsad',
     steps: [
         {
             id: 1,

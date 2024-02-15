@@ -9,11 +9,13 @@ export default defineType({
             name: 'heading',
             title: 'Heading',
             type: 'string',
+            initialValue: 'Mint an Ape',
         }),
         defineField({
             name: 'subText',
-            title: 'Subtext',
+            title: 'Sub Text',
             type: 'string',
+            initialValue: 'Osprey - The Smart Ape',
         }),
         defineField({
             name: 'imageSrc',
@@ -23,12 +25,13 @@ export default defineType({
                 defineField({
                     name: 'src',
                     title: 'Source',
-                    type: 'url',
+                    type: 'image',
                 }),
                 defineField({
                     name: 'alt',
                     title: 'Alt Text',
                     type: 'string',
+                    initialValue: 'Mint Ape Image',
                 }),
             ],
         }),
@@ -36,36 +39,43 @@ export default defineType({
             name: 'selectQuantityText',
             title: 'Select Quantity Text',
             type: 'string',
+            initialValue: 'Select Quantity:',
         }),
         defineField({
             name: 'mintCostText',
             title: 'Mint Cost Text',
             type: 'string',
+            initialValue: 'Mint Cost:',
         }),
         defineField({
             name: 'mintCostValue',
             title: 'Mint Cost Value',
             type: 'string',
+            initialValue: '0.547',
         }),
         defineField({
             name: 'mintCostCurrency',
             title: 'Mint Cost Currency',
             type: 'string',
+            initialValue: 'EFT',
         }),
         defineField({
             name: 'mintButton',
             title: 'Mint Button',
             type: 'string',
+            initialValue: 'Mint',
         }),
         defineField({
             name: 'walletBalanceText',
             title: 'Wallet Balance Text',
             type: 'string',
+            initialValue: 'Wallet Balance:',
         }),
         defineField({
             name: 'walletBalanceValue',
             title: 'Wallet Balance Value',
             type: 'string',
+            initialValue: '3.925 EFT',
         }),
     ],
 })

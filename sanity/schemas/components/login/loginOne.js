@@ -2,12 +2,12 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'loginOne',
-    title: 'Signin Form Data',
+    title: 'loginOne',
     type: 'object',
     fields: [
         defineField({
             name: 'heading',
-            title: 'Form Heading',
+            title: 'Heading',
             type: 'string',
         }),
         defineField({
@@ -37,7 +37,7 @@ export default defineType({
             fields: [
                 defineField({
                     name: 'quote',
-                    title: 'Testimonial Quote',
+                    title: 'Quote',
                     type: 'text',
                 }),
                 defineField({
@@ -47,22 +47,48 @@ export default defineType({
                     fields: [
                         defineField({
                             name: 'name',
-                            title: 'Author Name',
+                            title: 'Name',
                             type: 'string',
                         }),
                         defineField({
                             name: 'role',
-                            title: 'Author Role',
+                            title: 'Role',
                             type: 'string',
                         }),
                         defineField({
                             name: 'avatar',
-                            title: 'Author Avatar',
-                            type: 'url',
+                            title: 'Image',
+                            type: 'object',
+                            fields: [
+                                defineField({
+                                    name: 'src',
+                                    title: 'Source',
+                                    type: 'image',
+                                }),
+                                defineField({
+                                    name: 'alt',
+                                    title: 'Alt Text',
+                                    type: 'string',
+                                }),
+                            ],
                         }),
                     ],
                 }),
             ],
         }),
     ],
+    initialValue: {
+        heading: 'Welcome back to Rareblocks UI Kit',
+        rememberMeLabel: 'Remember me',
+        forgotPasswordLink: 'Forgot Password?',
+        signInButtonText: 'Sign In',
+        signUpLink: 'Don’t have an account? Sign up now',
+        testimonial: {
+            quote: 'You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.',
+            author: {
+                name: 'Leslie Alexander',
+                role: 'React Developer',
+            },
+        },
+    },
 })

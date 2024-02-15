@@ -56,11 +56,13 @@ const MintApeOne = ({
                 <div className="max-w-xs mx-auto mt-10 overflow-hidden bg-white shadow rounded-xl">
                     <div className="p-6 sm:p-8">
                         <div>
-                            <img
-                                className="object-cover w-full h-auto rounded-xl"
-                                src={imageSrc.src}
-                                alt={imageSrc.alt}
-                            />
+                            {imageSrc && (
+                                <img
+                                    className="object-cover w-full h-auto rounded-xl"
+                                    src={imageSrc.src}
+                                    alt={imageSrc.alt}
+                                />
+                            )}
                         </div>
 
                         <div className="mt-6 space-y-5">

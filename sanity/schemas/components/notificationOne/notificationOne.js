@@ -21,4 +21,9 @@ export default defineType({
             type: 'string',
         }),
     ],
+    initialValue: {
+        headingText: 'Upload Successfully',
+        uploadText: 'was uploaded successfully',
+        fileName: 'logo.png',
+    },
 })

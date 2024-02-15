@@ -70,21 +70,24 @@ const MintSuccessOne = ({
                     <div className="p-6">
                         <div className="sm:flex">
                             <div className="shrink-0">
-                                <img
-                                    className="object-cover h-auto mx-auto rounded-xl w-52 sm:mx-0"
-                                    src={imageSrc.src}
-                                    alt={imageSrc.alt}
-                                />
-
+                                {imageSrc && (
+                                    <img
+                                        className="object-cover h-auto mx-auto rounded-xl w-52 sm:mx-0"
+                                        src={imageSrc.src}
+                                        alt={imageSrc.alt}
+                                    />
+                                )}
                                 <div className="mt-5">
-                                    <a
-                                        href={openseaButton.href}
-                                        title=""
-                                        className="inline-flex items-center justify-center w-full px-5 py-3 text-xs font-bold tracking-widest text-gray-500 uppercase transition-all duration-200 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 hover:bg-gray-100 hover:text-gray-900"
-                                        role="button"
-                                    >
-                                        {openseaButton.label}
-                                    </a>
+                                    {openseaButton && (
+                                        <a
+                                            href={openseaButton.href}
+                                            title=""
+                                            className="inline-flex items-center justify-center w-full px-5 py-3 text-xs font-bold tracking-widest text-gray-500 uppercase transition-all duration-200 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 hover:bg-gray-100 hover:text-gray-900"
+                                            role="button"
+                                        >
+                                            {openseaButton.label}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
@@ -94,54 +97,68 @@ const MintSuccessOne = ({
                                 </p>
 
                                 <ul className="mt-6 space-y-5">
-                                    <li className="flex items-center justify-between">
-                                        <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
-                                            {owner.ownerText}
-                                        </p>
-                                        <div className="flex items-end justify-end">
-                                            <div className="relative inline-flex items-center justify-center shrink-0 w-7 h-7">
-                                                <div className="absolute inset-0">
-                                                    <img
-                                                        className="w-full h-full object-coveer"
-                                                        src={owner.avatar.src}
-                                                        alt={owner.avatar.alt}
-                                                    />
-                                                </div>
-                                                <div className="relative text-xs font-bold text-white uppercase">
-                                                    {owner.ownerName}
-                                                </div>
-                                            </div>
-                                            <p className="text-base font-bold text-gray-900">
-                                                {owner.ownerAddress}
+                                    {owner && (
+                                        <li className="flex items-center justify-between">
+                                            <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
+                                                {owner.ownerText}
                                             </p>
-                                        </div>
-                                    </li>
+                                            <div className="flex items-end justify-end">
+                                                <div className="relative inline-flex items-center justify-center shrink-0 w-7 h-7">
+                                                    <div className="absolute inset-0">
+                                                        <img
+                                                            className="w-full h-full object-coveer"
+                                                            src={
+                                                                owner.avatar.src
+                                                            }
+                                                            alt={
+                                                                owner.avatar.alt
+                                                            }
+                                                        />
+                                                    </div>
+                                                    <div className="relative text-xs font-bold text-white uppercase">
+                                                        {owner.ownerName}
+                                                    </div>
+                                                </div>
+                                                <p className="text-base font-bold text-gray-900">
+                                                    {owner.ownerAddress}
+                                                </p>
+                                            </div>
+                                        </li>
+                                    )}
 
-                                    <li className="flex items-center justify-between">
-                                        <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
-                                            {assetId.label}
-                                        </p>
-                                        <p className="text-base font-bold text-gray-900">
-                                            {assetId.value}
-                                        </p>
-                                    </li>
+                                    {assetId && (
+                                        <li className="flex items-center justify-between">
+                                            <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
+                                                {assetId.label}
+                                            </p>
+                                            <p className="text-base font-bold text-gray-900">
+                                                {assetId.value}
+                                            </p>
+                                        </li>
+                                    )}
 
-                                    <li className="flex items-center justify-between">
-                                        <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
-                                            {currentPrice.label}
-                                        </p>
-                                        <p className="text-base font-bold text-gray-900">
-                                            {currentPrice.value}
-                                        </p>
-                                    </li>
+                                    {currentPrice && (
+                                        <li className="flex items-center justify-between">
+                                            <p className="text-xs font-bold tracking-wide text-gray-500 uppercase">
+                                                {currentPrice.label}
+                                            </p>
+                                            <p className="text-base font-bold text-gray-900">
+                                                {currentPrice.value}
+                                            </p>
+                                        </li>
+                                    )}
                                 </ul>
 
-                                <p className="mt-6 text-xs font-bold tracking-wide text-gray-500 uppercase">
-                                    {description.label}
-                                </p>
-                                <p className="mt-4 text-sm font-medium text-gray-900">
-                                    {description.description}
-                                </p>
+                                {description && (
+                                    <>
+                                        <p className="mt-6 text-xs font-bold tracking-wide text-gray-500 uppercase">
+                                            {description.label}
+                                        </p>
+                                        <p className="mt-4 text-sm font-medium text-gray-900">
+                                            {description.description}
+                                        </p>
+                                    </>
+                                )}
                             </div>
                         </div>
                     </div>

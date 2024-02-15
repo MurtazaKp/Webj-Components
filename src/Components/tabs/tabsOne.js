@@ -25,7 +25,7 @@ const TabsOne = ({ tabs }) => {
                 <div className="w-full pb-1 overflow-x-auto">
                     <div className="border-b border-gray-200">
                         <nav className="flex -mb-px space-x-10">
-                            {tabs.map((link) => (
+                            {tabs?.map((link) => (
                                 <a
                                     key={link.id}
                                     href="#"

@@ -9,7 +9,6 @@ const BlogNewsletterOne = ({
     email,
     DownloadButtonText,
 }) => {
-    console.log(email)
     const newsletterData = {
         title: 'Download free eBook of best growth tips.',
         description:
@@ -25,7 +24,7 @@ const BlogNewsletterOne = ({
         },
         DownloadButtonText: 'Download E-Book',
     }
-    const [emailAddress, setEmailAddress] = useState(email.initialEmail)
+    const [emailAddress, setEmailAddress] = useState(email?.initialEmail)
 
     const handleEmailChange = (e) => {
         setEmailAddress(e.target.value)
@@ -53,51 +52,57 @@ const BlogNewsletterOne = ({
                             </div>
 
                             <div className="w-full max-w-sm mx-auto lg:col-span-3">
-                                <form
-                                    action="#"
-                                    method="POST"
-                                    className="space-y-4"
-                                >
-                                    <div>
-                                        <label
-                                            htmlFor="email"
-                                            className="sr-only"
-                                        >
-                                            {email.label}
-                                        </label>
+                                {email && (
+                                    <form
+                                        action="#"
+                                        method="POST"
+                                        className="space-y-4"
+                                    >
                                         <div>
-                                            <input
-                                                type={email.type}
-                                                name="email"
-                                                id="email"
-                                                placeholder={email.placeholder}
-                                                value={emailAddress}
-                                                onChange={handleEmailChange}
-                                                className="block w-full px-4 py-3 text-base sm:py-3.5 font-medium text-center text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg sm:text-sm focus:ring-gray-900 focus:border-gray-900"
-                                            />
+                                            <label
+                                                htmlFor="email"
+                                                className="sr-only"
+                                            >
+                                                {email.label}
+                                            </label>
+                                            <div>
+                                                <input
+                                                    type={email.type}
+                                                    name="email"
+                                                    id="email"
+                                                    placeholder={
+                                                        email.placeholder
+                                                    }
+                                                    value={emailAddress}
+                                                    onChange={handleEmailChange}
+                                                    className="block w-full px-4 py-3 text-base sm:py-3.5 font-medium text-center text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg sm:text-sm focus:ring-gray-900 focus:border-gray-900"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="relative group">
-                                        <div className="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
+                                        <div className="relative group">
+                                            <div className="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
 
-                                        <button
-                                            type="button"
-                                            onClick={handleDownloadClick}
-                                            className="relative inline-flex items-center sm:py-3.5 justify-center w-full px-8 py-3 text-base font-semibold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                                        >
-                                            {DownloadButtonText}
-                                        </button>
-                                    </div>
-                                </form>
+                                            <button
+                                                type="button"
+                                                onClick={handleDownloadClick}
+                                                className="relative inline-flex items-center sm:py-3.5 justify-center w-full px-8 py-3 text-base font-semibold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-lg sm:text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                                            >
+                                                {DownloadButtonText}
+                                            </button>
+                                        </div>
+                                    </form>
+                                )}
                             </div>
 
                             <div className="lg:col-span-2 lg:order-first">
-                                <img
-                                    className="object-cover w-56 h-auto mx-auto -mb-12 rounded-lg lg:mx-0"
-                                    src={image.src}
-                                    alt={image.alt}
-                                />
+                                {image && (
+                                    <img
+                                        className="object-cover w-56 h-auto mx-auto -mb-12 rounded-lg lg:mx-0"
+                                        src={image.src}
+                                        alt={image.alt}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>

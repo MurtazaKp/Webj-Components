@@ -26,15 +26,18 @@ const HeaderFour = ({ logo, navigationLinks, startTrialText }) => {
                     <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto">
                         {navigationLinks &&
                             navigationLinks?.map((link, index) => (
-                                <a
-                                    key={index}
-                                    href={link.href}
-                                    target={link.target || '_blank'}
-                                    title={link.title}
-                                    className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
-                                >
-                                    {link.label}
-                                </a>
+                                <>
+                                    <a
+                                        key={index}
+                                        href={link.href}
+                                        target={link.target || '_blank'}
+                                        title={link.title}
+                                        className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300"
+                                    >
+                                        {link.label}
+                                    </a>
+                                    <a href="/datagain">Datagain</a>
+                                </>
                             ))}
                     </div>
 

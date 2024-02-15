@@ -37,7 +37,7 @@ const PageTitleOne = ({ heading, breadcrumbs }) => {
                             </a>
                         </li>
 
-                        {breadcrumbs.map((item, index) => (
+                        {breadcrumbs?.map((item, index) => (
                             <li
                                 key={index}
                                 className="flex items-center space-x-3"
@@ -55,12 +55,12 @@ const PageTitleOne = ({ heading, breadcrumbs }) => {
                                 )}
 
                                 <a
-                                    href="#"
+                                    href={item.cta.href}
                                     title=""
                                     className="text-sm font-medium text-gray-500 hover:text-gray-900"
                                 >
                                     {' '}
-                                    {item.text}{' '}
+                                    {item.cta.label}{' '}
                                 </a>
                             </li>
                         ))}

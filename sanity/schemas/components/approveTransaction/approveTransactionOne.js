@@ -9,11 +9,14 @@ export default defineType({
             name: 'title',
             title: 'Title',
             type: 'string',
+            initialValue: 'Approve This Transaction?',
         }),
         defineField({
             name: 'description',
             title: 'Description',
-            type: 'text',
+            type: 'string',
+            initialValue:
+                'Are you sure minting this token? You must be awesome.',
         }),
         defineField({
             name: 'product',
@@ -24,16 +27,19 @@ export default defineType({
                     name: 'name',
                     title: 'Name',
                     type: 'string',
+                    initialValue: 'Easy Sweep',
                 }),
                 defineField({
                     name: 'quantityText',
                     title: 'Quantity Text',
                     type: 'string',
+                    initialValue: 'Quantity',
                 }),
                 defineField({
                     name: 'quantity',
                     title: 'Quantity',
                     type: 'number',
+                    initialValue: 1,
                 }),
                 defineField({
                     name: 'image',
@@ -43,12 +49,17 @@ export default defineType({
                         defineField({
                             name: 'src',
                             title: 'Source',
-                            type: 'url',
+                            type: 'image',
+                            initialValue: {
+                                src: 'https://landingfoliocom.imgix.net/store/collection/niftyui/images/approve-transaction/2/product-thumbnail.png',
+                                alt: 'Product Thumbnail',
+                            },
                         }),
                         defineField({
                             name: 'alt',
-                            title: 'Alt Text',
+                            title: 'Alt',
                             type: 'string',
+                            initialValue: 'avatar',
                         }),
                     ],
                 }),
@@ -63,6 +74,7 @@ export default defineType({
                     name: 'label',
                     title: 'Label',
                     type: 'string',
+                    initialValue: 'Submit',
                 }),
             ],
         }),

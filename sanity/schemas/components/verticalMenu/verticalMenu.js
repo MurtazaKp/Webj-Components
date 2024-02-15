@@ -2,9 +2,14 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
     name: 'verticalMenuOne',
-    title: 'Vertical Menu',
+    title: 'verticalMenuOne',
     type: 'object',
     fields: [
+        defineField({
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        }),
         defineField({
             name: 'logo',
             title: 'Logo',
@@ -12,14 +17,12 @@ export default defineType({
             fields: [
                 defineField({
                     name: 'src',
-                    title: 'Image Source',
-                    type: 'url',
-                    initialValue:
-                        'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/logo.svg',
+                    title: 'Source',
+                    type: 'image',
                 }),
                 defineField({
                     name: 'alt',
-                    title: 'Image Alt',
+                    title: 'Alt Text',
                     type: 'string',
                     initialValue: 'logo image',
                 }),
@@ -80,14 +83,12 @@ export default defineType({
                     fields: [
                         defineField({
                             name: 'src',
-                            title: 'Image Source',
-                            type: 'url',
-                            initialValue:
-                                'https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/vertical-menu/2/avatar-male.png',
+                            title: 'Source',
+                            type: 'image',
                         }),
                         defineField({
                             name: 'alt',
-                            title: 'Image Alt',
+                            title: 'Alt Text',
                             type: 'string',
                             initialValue: 'avatar image',
                         }),
@@ -95,6 +96,5 @@ export default defineType({
                 }),
             ],
         }),
-        // Add more fields as needed
     ],
 })
